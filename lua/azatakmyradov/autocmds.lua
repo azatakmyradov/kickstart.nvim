@@ -23,3 +23,20 @@ vim.api.nvim_create_autocmd({ 'BufWritePre' }, {
     -- vim.lsp.buf.format()
   end,
 })
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'fugitive',
+  callback = function()
+    local bufnr = vim.api.nvim_get_current_buf()
+    local opts = { buffer = bufnr, remap = false }
+
+    -- Fugitive
+    vim.keymap.set('n', '<leader>p', '<cmd>Git push<CR>', opts)
+
+    -- rebase always
+    vim.keymap.set('n', '<leader>P', '<cmd>Git pull --rebase<CR>', opts)
+
+    -- commit
+    vim.keymap.set('n', '<leader>tt', ':Git push -u origin ', opts)
+  end,
+})
