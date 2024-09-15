@@ -13,8 +13,12 @@ return { -- Autoformat
     end,
     formatters_by_ft = {
       lua = { 'stylua' },
+      typescript = { 'prettier', 'rustywind' },
+      javascript = { 'prettier', 'rustywind' },
       typescriptreact = { 'prettier', 'rustywind' },
-      blade = { 'blade-formatter' },
+      javascriptreact = { 'prettier', 'rustywind' },
+      svelte = { 'prettier', 'rustywind' },
+      blade = { 'blade-formatter', 'rustywind' },
       php = { 'pint', 'php_cs_fixer' },
     },
   },
