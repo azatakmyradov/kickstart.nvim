@@ -27,19 +27,6 @@ return {
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
   -- place them in the correct locations.
 
-  {
-    'folke/flash.nvim',
-    event = 'VeryLazy',
-    vscode = true,
-    ---@type Flash.Config
-    opts = {},
-    -- stylua: ignore
-    keys = {
-      { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
-      { "S", mode = { "n", "o", "x" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
-    },
-  },
-
   -- Git related plugins
   {
     'tpope/vim-fugitive',
