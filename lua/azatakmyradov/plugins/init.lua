@@ -47,4 +47,9 @@ return {
       'tpope/vim-rhubarb',
     },
   },
+
+  -- Undo Tree
+  {
+    'mbbill/undotree',
+  },
 }
