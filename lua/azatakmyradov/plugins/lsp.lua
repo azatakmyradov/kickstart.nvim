@@ -128,7 +128,7 @@ return { -- LSP Configuration & Plugins
       },
       gopls = {},
       rust_analyzer = {},
-      tsserver = {},
+      ts_ls = {},
       lua_ls = {
         -- cmd = {...},
         -- filetypes = { ...},
