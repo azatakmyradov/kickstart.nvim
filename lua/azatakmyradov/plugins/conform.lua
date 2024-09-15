@@ -15,6 +15,7 @@ return { -- Autoformat
       lua = { 'stylua' },
       typescriptreact = { 'prettier', 'rustywind' },
       blade = { 'blade-formatter' },
+      php = { 'pint', 'php_cs_fixer' },
     },
   },
 }
