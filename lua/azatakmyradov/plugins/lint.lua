@@ -6,7 +6,6 @@ return {
       local lint = require 'lint'
       lint.linters_by_ft =
         {
-          markdown = { 'markdownlint' },
           eslint = { 'js', 'jsx', 'ts', 'tsx' },
           php = { 'php' },
           phpcs = { 'php' },
