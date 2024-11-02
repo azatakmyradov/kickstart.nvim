@@ -54,10 +54,24 @@ return {
     -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
   },
 
+  -- auto close html tags
   {
     'windwp/nvim-ts-autotag',
     config = function()
       require('nvim-ts-autotag').setup()
     end,
+  },
+
+  -- Tailwind Tools
+  {
+    'luckasRanarison/tailwind-tools.nvim',
+    name = 'tailwind-tools',
+    build = ':UpdateRemotePlugins',
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter',
+      'nvim-telescope/telescope.nvim', -- optional
+      'neovim/nvim-lspconfig', -- optional
+    },
+    opts = {}, -- your configuration
   },
 }

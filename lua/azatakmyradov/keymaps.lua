@@ -156,8 +156,16 @@ vim.keymap.set('n', '<leader><leader>x', ':w<CR> <bar> :source %<CR>')
 vim.keymap.set('n', '<leader>,t', ':PlenaryBustedFile %<CR>')
 
 -- TailwindCSS
-vim.keymap.set('n', '<leader>tc', ':TailwindConcealToggle<CR>')
-vim.keymap.set('n', '<leader>tr', ':TailwindSort<CR>')
+vim.keymap.set('n', '<leader>tc', function()
+  local supported_filetypes = { 'html', 'blade', 'typescriptreact', 'svelte', 'javascriptreact' }
+  local filetype = vim.bo.filetype
+
+  for _, value in ipairs(supported_filetypes) do
+    if value == filetype then
+      vim.cmd 'TailwindConcealToggle'
+    end
+  end
+end)
 
 -- Copilot
 vim.keymap.set('n', '<leader>cd', ':Copilot disable<CR>')

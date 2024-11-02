@@ -57,12 +57,13 @@ return { -- Fuzzy Finder (files, lsp, etc)
     local builtin = require 'telescope.builtin'
 
     -- ignore this folders
-    local ignore_patterns = { 'node_modules', 'vendor', '.git', 'storage/clockwork' }
+    local ignore_patterns = { 'node_modules', 'vendor', '.git', 'storage/clockwork', 'storage/framework' }
 
     vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
     vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
     vim.keymap.set('n', '<leader>f', function()
       builtin.find_files {
+        no_ignore = true,
         file_ignore_patterns = ignore_patterns,
         prompt_title = '[S]earch [F]iles',
       }
