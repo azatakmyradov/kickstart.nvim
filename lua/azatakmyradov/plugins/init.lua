@@ -74,4 +74,9 @@ return {
     },
     opts = {}, -- your configuration
   },
+
+  {
+    'stevearc/dressing.nvim',
+    opts = {},
+  },
 }
