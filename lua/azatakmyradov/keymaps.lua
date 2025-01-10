@@ -166,9 +166,3 @@ vim.keymap.set('n', '<leader>tc', function()
     end
   end
 end)
-
--- Copilot
-vim.keymap.set('n', '<leader>cd', ':Copilot disable<CR>')
-
--- EasySwitch
-vim.keymap.set('n', '<leader>M', ":lua require('easyswitch').toggle()<CR>")
